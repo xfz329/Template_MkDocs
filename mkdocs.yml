@@ -1,0 +1,71 @@
+site_name: 编译网页名
+theme:
+  name: material
+dev_addr: '127.0.0.1:5500' 
+extra:
+   date: '时间'
+   version: '版本号'
+plugins:
+    - search
+    - with-pdf:
+        author: ABC
+        copyright: ©Copyright ABC
+        #
+        cover: true
+        # back_cover: true
+        cover_title: 文档标题名
+        cover_subtitle: 文档副标题名
+        # cover_logo: http://www.als-ultrasound.com/images/logo.png
+        custom_template_path: templates
+        #
+        toc_title: 文档目录
+        # heading_shift: false
+        # toc_level: 3
+        # ordered_chapter_level: 2
+        # excludes_children:
+        #    - 'release-notes/:upgrading'
+        #    - 'release-notes/:changelog'
+        #
+        # exclude_pages:
+        #    - 'bugs/'
+        #    - 'appendix/contribute/'
+        # convert_iframe:
+        #    - src: IFRAME SRC
+        #      img: POSTER IMAGE URL
+        #      text: ALTERNATE TEXT
+        #    - src: ...
+        # two_columns_level: 3
+        #
+        render_js: false
+        headless_chrome_path: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        #
+        # output_path: document.pdf
+        # enabled_if_env: ENABLE_PDF_EXPORT
+        #
+        # debug_html: true
+        # show_anchors: true
+        # verbose: true
+    - print-site:
+        add_to_navigation: true
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra_javascript:
+  - js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js   
+
+# extra_javascript:
+#   - katex.js
+#   - https://unpkg.com/katex@0/dist/katex.min.js
+#   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+# extra_css:
+#   - https://unpkg.com/katex@0/dist/katex.min.css      

@@ -1,0 +1,39 @@
+<article id="doc-cover">
+    <!-- Logo section -->
+    {% if cover_logo is defined %}
+        <div class="wrapper upper">
+            <div class="logo" style="background-image: url({{ cover_logo | to_url }});"></div>
+            <div class="line"></div>
+        </div>
+    {% else %}
+        <div class="wrapper"></div>
+    {% endif %}
+
+    <!-- Main content -->
+    <div class="wrapper">
+        <h1>{{ cover_title | e }}</h1>
+        {% if cover_subtitle is defined %}
+            <h2>{{ cover_subtitle | e }}</h2>
+        {% endif %}
+        {% if version is defined %}
+            <h2>{{ version | e }}</h2>
+        {% endif %}
+        {% if author is defined %}
+            <h2 id="author">{{ author | e }}</h2>
+        {% endif %}
+        {% if date is defined %}
+            <h2 id="date">{{ date | e }}</h2>
+        {% endif %}
+    </div>
+
+    <!-- Properties section -->
+    <div class="properties">
+        <address>
+            {% if copyright is defined %}
+                <p id="copyright">{{ copyright | e }}</p>
+            {% endif %}
+        </address>
+    </div>
+</article>
+
+
