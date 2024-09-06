@@ -1,39 +1,29 @@
 <article id="doc-cover">
     <!-- Logo section -->
-    {% if cover_logo is defined %}
-        <div class="wrapper upper">
-            <div class="logo" style="background-image: url({{ cover_logo | to_url }});"></div>
-            <div class="line"></div>
-        </div>
-    {% else %}
-        <div class="wrapper"></div>
-    {% endif %}
 
-    <!-- Main content -->
-    <div class="wrapper">
-        <h1>{{ cover_title | e }}</h1>
-        {% if cover_subtitle is defined %}
-            <h2>{{ cover_subtitle | e }}</h2>
-        {% endif %}
-        {% if version is defined %}
-            <h2>{{ version | e }}</h2>
-        {% endif %}
-        {% if author is defined %}
-            <h2 id="author">{{ author | e }}</h2>
-        {% endif %}
-        {% if date is defined %}
-            <h2 id="date">{{ date | e }}</h2>
-        {% endif %}
-    </div>
+    <!-- <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article> -->
 
-    <!-- Properties section -->
-    <div class="properties">
-        <address>
-            {% if copyright is defined %}
-                <p id="copyright">{{ copyright | e }}</p>
-            {% endif %}
-        </address>
+  <div class="flex-container">
+    <div class="formula-container">
+      <!-- 公式内容 -->
+      E = mc²
     </div>
+    <div class="graph-container">
+      <!-- 图形内容 -->
+    </div>
+  </div>
 </article>
 
 
